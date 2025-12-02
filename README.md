@@ -1,20 +1,24 @@
-# Email Classification System for Organizational Efficiency
+# 📧 Email Classification System for Organizational Efficiency
 
 ## 📋 Project Overview
 
-An AI-powered email classification system that automatically categorizes emails into **Important**, **Promotion**, or **Spam** categories using Machine Learning. Built using the Enron Email Dataset and deployed with FastAPI.
+An AI-powered email classification system that automatically categorizes emails into **4 organizational categories** using Machine Learning. Built using the Enron Email Dataset and deployed with FastAPI.
 
-![Project Banner](docs/screenshots/banner_placeholder.png)
+### 🏷️ Categories
+- 🔴 **Urgent** - Time-sensitive, critical matters requiring immediate attention
+- 🟡 **Financial** - Budget, invoice, payment, and money-related communications
+- 🟣 **HR** - Human resources, employee, hiring, and benefits related
+- 🟢 **General** - General business communications and queries
 
 ---
 
 ## 🎯 Features
 
-- **Automatic Email Classification**: Classify emails into 3 categories with high accuracy
+- **Automatic Email Classification**: Classify emails into 4 organizational categories with high accuracy
 - **REST API**: FastAPI-based REST API for predictions
-- **Web Interface**: User-friendly web UI for email classification
-- **Batch Processing**: Classify multiple emails at once
-- **Real-time Predictions**: Get instant classification results with confidence scores
+- **Web Interface**: User-friendly web UI with real-time classification
+- **Confidence Scores**: Visual confidence bars for each category
+- **Real-time Predictions**: Get instant classification results
 
 ---
 
@@ -22,18 +26,20 @@ An AI-powered email classification system that automatically categorizes emails 
 
 | Metric | Value |
 |--------|-------|
-| **Accuracy** | 94.02% |
-| **Model** | Logistic Regression (Optimized) |
+| **Accuracy** | 90.76% |
+| **Model** | Logistic Regression (GridSearchCV Optimized) |
 | **Dataset** | Enron Email Dataset (238,370 emails) |
-| **Feature Extraction** | TF-IDF (5,000 features) |
+| **Feature Extraction** | TF-IDF Vectorization |
+| **Optimization** | GridSearchCV (C=10, max_iter=1000) |
 
-### Classification Report
+### Category Distribution
 
-| Category | Precision | Recall | F1-Score |
-|----------|-----------|--------|----------|
-| Important | 0.95 | 0.99 | 0.97 |
-| Promotion | 0.92 | 0.88 | 0.90 |
-| Spam | 0.92 | 0.74 | 0.82 |
+| Category | Percentage |
+|----------|------------|
+| 🔴 Urgent | 14.36% |
+| 🟡 Financial | 26.13% |
+| 🟣 HR | 16.13% |
+| 🟢 General | 43.38% |
 
 ---
 
@@ -44,21 +50,17 @@ GENAI_PROJ/
 ├── app/
 │   ├── __init__.py           # Package initialization
 │   ├── predictor.py          # Core prediction module
-│   ├── fastapi_app.py        # FastAPI REST API
-│   └── test_api.py           # API testing script
+│   └── fastapi_app.py        # FastAPI REST API
 ├── models/
-│   ├── email_classifier_model.pkl    # Trained ML model
+│   ├── email_classifier_model.pkl    # Trained ML model (90.76% accuracy)
 │   └── tfidf_vectorizer.pkl          # TF-IDF vectorizer
 ├── static/
 │   ├── style.css             # Web UI styles
 │   └── script.js             # Frontend JavaScript
 ├── templates/
 │   └── index.html            # Web UI HTML template
-├── docs/
-│   ├── DOCUMENTATION.md      # Detailed documentation
-│   └── screenshots/          # UI screenshots
 ├── notebooks/
-│   └── Email_Classification_System.ipynb  # Training notebook
+│   └── Email_Classification_System_(2).ipynb  # Training notebook
 ├── requirements.txt          # Python dependencies
 ├── README.md                 # This file
 └── run.py                    # Quick start script
@@ -148,12 +150,13 @@ Content-Type: application/json
 ```json
 {
     "success": true,
-    "predicted_category": "Important",
+    "predicted_category": "Financial",
     "confidence": 95.5,
     "confidence_scores": {
-        "Important": 95.5,
-        "Promotion": 3.2,
-        "Spam": 1.3
+        "Urgent": 2.1,
+        "Financial": 95.5,
+        "HR": 1.2,
+        "General": 1.2
     }
 }
 ```
@@ -251,7 +254,7 @@ The model was trained using the Jupyter notebook in `notebooks/Email_Classificat
 
 ## 👥 Contributors
 
-- **Student Name** - Development & Implementation
+- **Susanth** - Development & Implementation
 
 ---
 

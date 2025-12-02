@@ -136,10 +136,11 @@ class EmailClassifier:
             prediction = self.model.predict(text_vectorized)[0]
             probabilities = self.model.predict_proba(text_vectorized)[0]
             
-            # Create confidence scores dictionary
+            # Create confidence scores dictionary using model's actual class order
+            model_classes = self.model.classes_
             confidence_scores = {
                 cat: round(prob * 100, 2) 
-                for cat, prob in zip(self.categories, probabilities)
+                for cat, prob in zip(model_classes, probabilities)
             }
             
             # Get the maximum confidence
