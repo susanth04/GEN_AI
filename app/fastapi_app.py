@@ -65,10 +65,11 @@ class BatchEmailRequest(BaseModel):
 
 
 class ConfidenceScores(BaseModel):
-    """Model for confidence scores."""
-    Important: float
-    Promotion: float
-    Spam: float
+    """Model for confidence scores - 4 categories for organizational efficiency."""
+    Urgent: float
+    Financial: float
+    HR: float
+    General: float
 
 
 class PredictionResponse(BaseModel):
