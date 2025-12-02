@@ -229,7 +229,7 @@ VECTORIZER_PATH=models/tfidf_vectorizer.pkl
 
 ## 📈 Model Training
 
-The model was trained using the Jupyter notebook in `notebooks/Email_Classification_System.ipynb`.
+The model was trained using the Jupyter notebook in `notebooks/Email_Classification_System_(2).ipynb`.
 
 ### Training Process:
 1. **Data Collection**: Enron Email Dataset from Kaggle (517,401 emails)
