@@ -46,8 +46,8 @@ class EmailClassifier:
         self.lemmatizer = WordNetLemmatizer()
         self.stop_words = set(stopwords.words('english'))
         
-        # Category labels
-        self.categories = ['Important', 'Promotion', 'Spam']
+        # Category labels - 4 classes for organizational efficiency
+        self.categories = ['Urgent', 'Financial', 'HR', 'General']
         
         # Load model and vectorizer
         self.load_model()
@@ -178,13 +178,14 @@ def test_predictor():
     classifier = EmailClassifier()
     
     test_emails = [
-        "URGENT: Project deadline tomorrow! Please submit your reports immediately.",
-        "Special offer! Get 50% off on all products. Limited time deal!",
-        "Congratulations! You've won $1,000,000! Click here to claim your prize now!"
+        "URGENT: Server is down! Need immediate action to restore services.",
+        "Please review the Q3 financial report and budget allocation.",
+        "HR Department: New employee onboarding scheduled for Monday.",
+        "Team meeting rescheduled to Thursday afternoon."
     ]
     
     print("\n" + "="*60)
-    print("EMAIL CLASSIFICATION TEST")
+    print("EMAIL CLASSIFICATION TEST (4 Categories)")
     print("="*60)
     
     for i, email in enumerate(test_emails, 1):

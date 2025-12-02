@@ -13,11 +13,12 @@ const resultsSection = document.getElementById('resultsSection');
 const errorSection = document.getElementById('errorSection');
 const loading = document.getElementById('loading');
 
-// Category icons and colors
+// Category icons and colors - 4 categories for organizational efficiency
 const categoryConfig = {
-    'Important': { icon: '🔴', class: 'important' },
-    'Promotion': { icon: '🟡', class: 'promotion' },
-    'Spam': { icon: '⚫', class: 'spam' }
+    'Urgent': { icon: '🔴', class: 'urgent' },
+    'Financial': { icon: '🟡', class: 'financial' },
+    'HR': { icon: '🟣', class: 'hr' },
+    'General': { icon: '🟢', class: 'general' }
 };
 
 /**
@@ -84,10 +85,11 @@ function displayResults(data) {
     // Update confidence value
     document.getElementById('confidenceValue').textContent = `${confidence}%`;
     
-    // Update confidence bars with animation
-    updateConfidenceBar('important', scores.Important);
-    updateConfidenceBar('promotion', scores.Promotion);
-    updateConfidenceBar('spam', scores.Spam);
+    // Update confidence bars with animation - 4 categories
+    updateConfidenceBar('urgent', scores.Urgent || 0);
+    updateConfidenceBar('financial', scores.Financial || 0);
+    updateConfidenceBar('hr', scores.HR || 0);
+    updateConfidenceBar('general', scores.General || 0);
     
     // Show results section
     resultsSection.style.display = 'block';
@@ -158,11 +160,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Sample emails for quick testing
+// Sample emails for quick testing - 4 categories
 const sampleEmails = {
-    important: "URGENT: The quarterly board meeting has been rescheduled to tomorrow at 9 AM. Please review the attached financial reports and come prepared with your department updates. This is a mandatory meeting for all senior staff.",
-    promotion: "🎉 EXCLUSIVE OFFER! Get 70% OFF on all products this Black Friday! Use code SAVE70 at checkout. Free shipping on orders over $50. Shop now at our online store!",
-    spam: "CONGRATULATIONS!!! You have been selected as the WINNER of $10,000,000 USD! Click here IMMEDIATELY to claim your prize. Send your bank account details and social security number to receive your winnings!!!"
+    urgent: "URGENT: Server is down! Need immediate action to restore services. This is critical and requires your attention ASAP!",
+    financial: "Please review the Q3 financial report. Budget allocation and invoice approvals are needed for the next fiscal year.",
+    hr: "HR Department: New employee onboarding scheduled for Monday. Please complete the training documentation and benefits enrollment.",
+    general: "Team meeting rescheduled to Thursday afternoon. Let me know if you can attend."
 };
 
 /**

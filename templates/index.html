@@ -59,31 +59,41 @@ URGENT: Please review the quarterly report and submit your feedback by end of da
                     
                     <div class="bar-container">
                         <div class="bar-label">
-                            <span>🔴 Important</span>
-                            <span id="importantScore">0%</span>
+                            <span>🔴 Urgent</span>
+                            <span id="urgentScore">0%</span>
                         </div>
                         <div class="bar-bg">
-                            <div class="bar important-bar" id="importantBar"></div>
+                            <div class="bar urgent-bar" id="urgentBar"></div>
                         </div>
                     </div>
                     
                     <div class="bar-container">
                         <div class="bar-label">
-                            <span>🟡 Promotion</span>
-                            <span id="promotionScore">0%</span>
+                            <span>🟡 Financial</span>
+                            <span id="financialScore">0%</span>
                         </div>
                         <div class="bar-bg">
-                            <div class="bar promotion-bar" id="promotionBar"></div>
+                            <div class="bar financial-bar" id="financialBar"></div>
                         </div>
                     </div>
                     
                     <div class="bar-container">
                         <div class="bar-label">
-                            <span>⚫ Spam</span>
-                            <span id="spamScore">0%</span>
+                            <span>🟣 HR</span>
+                            <span id="hrScore">0%</span>
                         </div>
                         <div class="bar-bg">
-                            <div class="bar spam-bar" id="spamBar"></div>
+                            <div class="bar hr-bar" id="hrBar"></div>
+                        </div>
+                    </div>
+
+                    <div class="bar-container">
+                        <div class="bar-label">
+                            <span>🟢 General</span>
+                            <span id="generalScore">0%</span>
+                        </div>
+                        <div class="bar-bg">
+                            <div class="bar general-bar" id="generalBar"></div>
                         </div>
                     </div>
                 </div>
@@ -107,25 +117,29 @@ URGENT: Please review the quarterly report and submit your feedback by end of da
         <section class="info-section">
             <h2>📚 Category Descriptions</h2>
             <div class="info-cards">
-                <div class="info-card important">
-                    <h3>🔴 Important</h3>
-                    <p>Work-related, urgent, or high-priority emails that require immediate attention.</p>
+                <div class="info-card urgent">
+                    <h3>🔴 Urgent</h3>
+                    <p>Time-sensitive, critical matters requiring immediate attention.</p>
                 </div>
-                <div class="info-card promotion">
-                    <h3>🟡 Promotion</h3>
-                    <p>Marketing emails, offers, newsletters, and promotional content.</p>
+                <div class="info-card financial">
+                    <h3>🟡 Financial</h3>
+                    <p>Budget, invoice, payment, and money-related communications.</p>
                 </div>
-                <div class="info-card spam">
-                    <h3>⚫ Spam</h3>
-                    <p>Unwanted, suspicious, or potentially harmful emails.</p>
+                <div class="info-card hr">
+                    <h3>🟣 HR</h3>
+                    <p>Human resources, employee, hiring, and benefits related.</p>
+                </div>
+                <div class="info-card general">
+                    <h3>🟢 General</h3>
+                    <p>General business communications and queries.</p>
                 </div>
             </div>
         </section>
 
         <!-- Footer -->
         <footer class="footer">
-            <p>Email Classification System | Powered by Machine Learning</p>
-            <p>Model: Logistic Regression | Dataset: Enron Emails | Accuracy: 94.02%</p>
+            <p>Email Classification System for Organizational Efficiency</p>
+            <p>Model: Logistic Regression | Dataset: Enron Emails | 4 Categories</p>
         </footer>
     </div>
 

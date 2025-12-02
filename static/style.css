@@ -3,9 +3,10 @@
 :root {
     --primary-color: #4f46e5;
     --primary-hover: #4338ca;
-    --important-color: #ef4444;
-    --promotion-color: #f59e0b;
-    --spam-color: #374151;
+    --urgent-color: #ef4444;
+    --financial-color: #f59e0b;
+    --hr-color: #8b5cf6;
+    --general-color: #10b981;
     --bg-color: #f8fafc;
     --card-bg: #ffffff;
     --text-color: #1e293b;
@@ -164,19 +165,24 @@ button#classifyBtn:disabled {
     font-size: 1.25rem;
 }
 
-.category-badge.important {
+.category-badge.urgent {
     background: rgba(239, 68, 68, 0.1);
-    color: var(--important-color);
+    color: var(--urgent-color);
 }
 
-.category-badge.promotion {
+.category-badge.financial {
     background: rgba(245, 158, 11, 0.1);
-    color: var(--promotion-color);
+    color: var(--financial-color);
 }
 
-.category-badge.spam {
-    background: rgba(55, 65, 81, 0.1);
-    color: var(--spam-color);
+.category-badge.hr {
+    background: rgba(139, 92, 246, 0.1);
+    color: var(--hr-color);
+}
+
+.category-badge.general {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--general-color);
 }
 
 .category-icon {
@@ -232,16 +238,20 @@ button#classifyBtn:disabled {
     transition: width 0.5s ease-out;
 }
 
-.important-bar {
+.urgent-bar {
     background: linear-gradient(90deg, #ef4444, #f87171);
 }
 
-.promotion-bar {
+.financial-bar {
     background: linear-gradient(90deg, #f59e0b, #fbbf24);
 }
 
-.spam-bar {
-    background: linear-gradient(90deg, #374151, #6b7280);
+.hr-bar {
+    background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+}
+
+.general-bar {
+    background: linear-gradient(90deg, #10b981, #34d399);
 }
 
 /* Error Section */
@@ -323,19 +333,24 @@ button#classifyBtn:disabled {
     color: var(--text-muted);
 }
 
-.info-card.important {
+.info-card.urgent {
     background: rgba(239, 68, 68, 0.05);
     border: 1px solid rgba(239, 68, 68, 0.2);
 }
 
-.info-card.promotion {
+.info-card.financial {
     background: rgba(245, 158, 11, 0.05);
     border: 1px solid rgba(245, 158, 11, 0.2);
 }
 
-.info-card.spam {
-    background: rgba(55, 65, 81, 0.05);
-    border: 1px solid rgba(55, 65, 81, 0.2);
+.info-card.hr {
+    background: rgba(139, 92, 246, 0.05);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.info-card.general {
+    background: rgba(16, 185, 129, 0.05);
+    border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
 /* Footer */

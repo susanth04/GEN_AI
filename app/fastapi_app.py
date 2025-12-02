@@ -154,11 +154,12 @@ async def get_categories():
     """Get available email categories and their descriptions."""
     return {
         "success": True,
-        "categories": ["Important", "Promotion", "Spam"],
+        "categories": ["Urgent", "Financial", "HR", "General"],
         "descriptions": {
-            "Important": "Work-related, urgent, or high-priority emails",
-            "Promotion": "Marketing, offers, newsletters, and promotional content",
-            "Spam": "Unwanted, suspicious, or potentially harmful emails"
+            "Urgent": "Time-sensitive, critical matters requiring immediate attention",
+            "Financial": "Budget, invoice, payment, and money-related communications",
+            "HR": "Human resources, employee, hiring, and benefits related",
+            "General": "General business communications and queries"
         }
     }
 
