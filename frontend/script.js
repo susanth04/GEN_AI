@@ -3,8 +3,8 @@
  * Vercel Deployment Version
  */
 
-// API Configuration - UPDATE THIS AFTER DEPLOYING BACKEND TO RENDER
-const API_BASE_URL = 'https://your-render-app-name.onrender.com';
+// API Configuration - Render Backend URL
+const API_BASE_URL = 'https://gen-ai-bfle.onrender.com';
 
 // DOM Elements
 const emailInput = document.getElementById('emailInput');
