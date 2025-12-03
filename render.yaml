@@ -1,0 +1,13 @@
+# Render Blueprint - Backend Deployment Configuration
+# Deploy FastAPI backend to Render
+
+services:
+  - type: web
+    name: email-classifier-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt && python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords'); nltk.download('wordnet'); nltk.download('punkt_tab')"
+    startCommand: uvicorn app.fastapi_app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.0"
+    healthCheckPath: /api/health

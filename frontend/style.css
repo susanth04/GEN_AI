@@ -103,7 +103,7 @@ textarea {
 textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    box-shadow: 0 0 0 3px rgba(146, 64, 14, 0.1);
 }
 
 textarea::placeholder {
@@ -158,7 +158,7 @@ button#classifyBtn:disabled {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    background: linear-gradient(135deg, #faf7f2 0%, #f5f0e8 100%);
     border-radius: 1rem;
     margin-bottom: 1.5rem;
 }
@@ -174,12 +174,12 @@ button#classifyBtn:disabled {
 }
 
 .category-badge.urgent {
-    background: rgba(239, 68, 68, 0.1);
+    background: rgba(220, 38, 38, 0.1);
     color: var(--urgent-color);
 }
 
 .category-badge.financial {
-    background: rgba(245, 158, 11, 0.1);
+    background: rgba(202, 138, 4, 0.1);
     color: var(--financial-color);
 }
 
@@ -189,7 +189,7 @@ button#classifyBtn:disabled {
 }
 
 .category-badge.general {
-    background: rgba(16, 185, 129, 0.1);
+    background: rgba(22, 163, 74, 0.1);
     color: var(--general-color);
 }
 
@@ -247,11 +247,11 @@ button#classifyBtn:disabled {
 }
 
 .urgent-bar {
-    background: linear-gradient(90deg, #ef4444, #f87171);
+    background: linear-gradient(90deg, #dc2626, #ef4444);
 }
 
 .financial-bar {
-    background: linear-gradient(90deg, #f59e0b, #fbbf24);
+    background: linear-gradient(90deg, #ca8a04, #eab308);
 }
 
 .hr-bar {
@@ -259,7 +259,7 @@ button#classifyBtn:disabled {
 }
 
 .general-bar {
-    background: linear-gradient(90deg, #10b981, #34d399);
+    background: linear-gradient(90deg, #16a34a, #22c55e);
 }
 
 /* Error Section */
@@ -269,7 +269,7 @@ button#classifyBtn:disabled {
 
 .error-message {
     padding: 1rem;
-    background: rgba(239, 68, 68, 0.1);
+    background: rgba(220, 38, 38, 0.1);
     border: 1px solid var(--error-color);
     border-radius: 0.75rem;
     color: var(--error-color);
@@ -343,13 +343,13 @@ button#classifyBtn:disabled {
 }
 
 .info-card.urgent {
-    background: rgba(239, 68, 68, 0.05);
-    border: 1px solid rgba(239, 68, 68, 0.2);
+    background: rgba(220, 38, 38, 0.05);
+    border: 1px solid rgba(220, 38, 38, 0.2);
 }
 
 .info-card.financial {
-    background: rgba(245, 158, 11, 0.05);
-    border: 1px solid rgba(245, 158, 11, 0.2);
+    background: rgba(202, 138, 4, 0.05);
+    border: 1px solid rgba(202, 138, 4, 0.2);
 }
 
 .info-card.hr {
@@ -358,8 +358,8 @@ button#classifyBtn:disabled {
 }
 
 .info-card.general {
-    background: rgba(16, 185, 129, 0.05);
-    border: 1px solid rgba(16, 185, 129, 0.2);
+    background: rgba(22, 163, 74, 0.05);
+    border: 1px solid rgba(22, 163, 74, 0.2);
 }
 
 /* Footer */
